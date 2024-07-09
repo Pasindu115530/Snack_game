@@ -44,7 +44,9 @@ void Draw()
         cout << endl;
     }   
         for (int i = 0 ; i < width+2 ; i++)
-        cout << "#";        
+        cout << "#" ;
+        cout << endl;
+        cout << "score  =  "  << score;        
 
     
         
@@ -92,6 +94,11 @@ void Logic(){
         default:
             break;
     }
+    if(x > height || x < 0 || y > height || y < 0 )
+        gameOver = true;
+    if(x==fruitX && y==fruitY) {
+        score += 10;
+    }   
 
 
 }
